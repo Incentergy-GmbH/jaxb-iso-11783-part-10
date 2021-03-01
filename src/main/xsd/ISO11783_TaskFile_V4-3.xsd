@@ -102,7 +102,7 @@
   <xs:element name="ISO11783_TaskData">
     <xs:annotation>
       <xs:appinfo>
-        <jaxb:class name="ISO 11783 Task Data File"/>
+        <jaxb:class name="ISO11783TaskData"/>
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
