@@ -15,15 +15,15 @@
         </xsl:copy>
     </xsl:template>
 
-    <xsl:template match="xs:element/xs:annotation">
+    <xsl:template match="*[local-name()!='choice']/xs:element/xs:annotation">
         <xs:annotation>
             <xs:appinfo>
                 <xsl:for-each select="xs:documentation">
-                    <jaxb:property>
+                    <jaxb:class>
                         <xsl:attribute name="name">
                             <xsl:value-of select="normalize-space(text())" />
                         </xsl:attribute> 
-                    </jaxb:property>
+                    </jaxb:class>
                 </xsl:for-each>
             </xs:appinfo>
         </xs:annotation>
