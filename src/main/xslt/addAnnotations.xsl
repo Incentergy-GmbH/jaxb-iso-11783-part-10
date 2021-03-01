@@ -21,9 +21,22 @@
                 <xsl:for-each select="xs:documentation">
                     <jaxb:class>
                         <xsl:attribute name="name">
-                            <xsl:value-of select="normalize-space(text())" />
+                            <xsl:value-of select="normalize-space(translate(text(), ' ', ''))" />
                         </xsl:attribute> 
                     </jaxb:class>
+                </xsl:for-each>
+            </xs:appinfo>
+        </xs:annotation>
+    </xsl:template>
+    <xsl:template match="xs:choice/xs:element/xs:annotation">
+        <xs:annotation>
+            <xs:appinfo>
+                <xsl:for-each select="xs:documentation">
+                    <jaxb:property>
+                        <xsl:attribute name="name">
+                            <xsl:value-of select="normalize-space(text())" />
+                        </xsl:attribute> 
+                    </jaxb:property>
                 </xsl:for-each>
             </xs:appinfo>
         </xs:annotation>
