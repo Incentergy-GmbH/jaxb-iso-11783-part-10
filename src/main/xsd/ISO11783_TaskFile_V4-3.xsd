@@ -106,7 +106,7 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:choice>
         <xs:element ref="AFE" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
             <xs:appinfo>
