@@ -14,12 +14,12 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice minOccurs="0">
+      <xs:choice>
         <xs:element ref="PTN" minOccurs="0" maxOccurs="2">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							Position
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="Position"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
       </xs:choice>
@@ -57,19 +57,24 @@
           </xs:appinfo>
         </xs:annotation>
         <xs:simpleType>
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:typesafeEnumClass name="Typeidm29"/>
+            </xs:appinfo>
+          </xs:annotation>
           <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="1">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Planned
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="PLANNED"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="4">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Effective (Realized)
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="EFFECTIVE_REALIZED"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
           </xs:restriction>
@@ -160,12 +165,12 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:choice>
         <xs:element ref="CCL" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							CodedCommentListValue
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="CodedCommentListValue"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
       </xs:choice>
@@ -202,26 +207,31 @@
           </xs:appinfo>
         </xs:annotation>
         <xs:simpleType>
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:typesafeEnumClass name="CodedCommentScope"/>
+            </xs:appinfo>
+          </xs:annotation>
           <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="1">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Point
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="POINT"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="2">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Global
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="GLOBAL"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="3">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Continuous
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="CONTINUOUS"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
           </xs:restriction>
@@ -320,12 +330,12 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice maxOccurs="unbounded">
+      <xs:choice>
         <xs:element ref="CRG" minOccurs="1" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							ColourRange
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="ColourRange"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
       </xs:choice>
@@ -413,12 +423,12 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice minOccurs="0">
+      <xs:choice>
         <xs:element ref="ASP" minOccurs="0">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							AllocationStamp
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="AllocationStamp"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
       </xs:choice>
@@ -536,12 +546,12 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice minOccurs="0">
+      <xs:choice>
         <xs:element ref="ASP" minOccurs="0">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							AllocationStamp
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="AllocationStamp"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
       </xs:choice>
@@ -644,12 +654,12 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:choice>
         <xs:element ref="CVT" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							CropVariety
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="CropVariety"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
       </xs:choice>
@@ -751,12 +761,12 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:choice>
         <xs:element ref="OTR" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							OperationTechniqueReference
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="OperationTechniqueReference"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
       </xs:choice>
@@ -1215,33 +1225,33 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice maxOccurs="unbounded">
+      <xs:choice>
         <xs:element ref="DET" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							DeviceElement
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="DeviceElement"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
         <xs:element ref="DPT" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							DeviceProperty
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="DeviceProperty"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
         <xs:element ref="DPD" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							DeviceProcessData
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="DeviceProcessData"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
         <xs:element ref="DVP" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							DeviceValuePresentation
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="DeviceValuePresentation"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
       </xs:choice>
@@ -1343,12 +1353,12 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice minOccurs="0">
+      <xs:choice>
         <xs:element ref="ASP" minOccurs="0">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							AllocationStamp
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="AllocationStamp"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
       </xs:choice>
@@ -1399,12 +1409,12 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:choice>
         <xs:element ref="DOR" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							DeviceObjectReference
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="DeviceObjectReference"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
       </xs:choice>
@@ -1442,54 +1452,59 @@
           </xs:appinfo>
         </xs:annotation>
         <xs:simpleType>
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:typesafeEnumClass name="DeviceElementType"/>
+            </xs:appinfo>
+          </xs:annotation>
           <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="1">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									device
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="DEVICE"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="2">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									function
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="FUNCTION"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="3">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									bin
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="BIN"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="4">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									section
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="SECTION"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="5">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									unit
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="UNIT"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="6">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									connector
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="CONNECTOR"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="7">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									navigation
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="NAVIGATION"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
           </xs:restriction>
@@ -2028,19 +2043,24 @@
           </xs:appinfo>
         </xs:annotation>
         <xs:simpleType>
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:typesafeEnumClass name="GridType"/>
+            </xs:appinfo>
+          </xs:annotation>
           <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="1">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									grid type 1
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="GRID_TYPE_1"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="2">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									grid type 2
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="GRID_TYPE_2"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
           </xs:restriction>
@@ -2068,19 +2088,19 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice minOccurs="1" maxOccurs="unbounded">
+      <xs:choice>
         <xs:element ref="ASP">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							AllocationStamp
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="AllocationStamp"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
         <xs:element ref="GST" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							GuidanceShift
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="GuidanceShift"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
       </xs:choice>
@@ -2107,19 +2127,19 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice maxOccurs="unbounded">
+      <xs:choice>
         <xs:element ref="GPN" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							GuidancePattern
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="GuidancePattern"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
         <xs:element ref="PLN" minOccurs="0">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							BoundaryPolygon
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="BoundaryPolygon"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
       </xs:choice>
@@ -2158,19 +2178,19 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice minOccurs="1" maxOccurs="unbounded">
+      <xs:choice>
         <xs:element ref="LSG" minOccurs="1" maxOccurs="1">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							LineString
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="LineString"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
         <xs:element ref="PLN" minOccurs="0">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							BoundaryPolygon
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="BoundaryPolygon"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
       </xs:choice>
@@ -2207,40 +2227,45 @@
           </xs:appinfo>
         </xs:annotation>
         <xs:simpleType>
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:typesafeEnumClass name="GuidancePatternType"/>
+            </xs:appinfo>
+          </xs:annotation>
           <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="1">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									AB
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="AB"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="2">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									A+
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="A"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="3">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Curve
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="CURVE"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="4">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Pivot
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="PIVOT"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="5">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Spiral
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="SPIRAL"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
           </xs:restriction>
@@ -2253,26 +2278,31 @@
           </xs:appinfo>
         </xs:annotation>
         <xs:simpleType>
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:typesafeEnumClass name="GuidancePatternOptions"/>
+            </xs:appinfo>
+          </xs:annotation>
           <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="1">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Clockwise - for pivot
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="CLOCKWISE__FOR_PIVOT"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="2">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Counter-clockwise - for pivot
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="COUNTERCLOCKWISE__FOR_PIVOT"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="3">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Full Circle - for pivot
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="FULL_CIRCLE__FOR_PIVOT"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
           </xs:restriction>
@@ -2285,33 +2315,38 @@
           </xs:appinfo>
         </xs:annotation>
         <xs:simpleType>
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:typesafeEnumClass name="GuidancePatternPropagationDirection"/>
+            </xs:appinfo>
+          </xs:annotation>
           <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="1">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Both directions
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="BOTH_DIRECTIONS"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="2">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Left direction only
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="LEFT_DIRECTION_ONLY"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="3">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Right direction only
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="RIGHT_DIRECTION_ONLY"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="4">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									No propagation
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="NO_PROPAGATION"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
           </xs:restriction>
@@ -2324,33 +2359,38 @@
           </xs:appinfo>
         </xs:annotation>
         <xs:simpleType>
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:typesafeEnumClass name="GuidancePatternExtension"/>
+            </xs:appinfo>
+          </xs:annotation>
           <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="1">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									From both first and last point
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="FROM_BOTH_FIRST_AND_LAST_POINT"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="2">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									From first point (A) only
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="FROM_FIRST_POINT_A_ONLY"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="3">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									From last point (B) only
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="FROM_LAST_POINT_B_ONLY"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="4">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									No extensions
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="NO_EXTENSIONS"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
           </xs:restriction>
@@ -2389,82 +2429,87 @@
           </xs:appinfo>
         </xs:annotation>
         <xs:simpleType>
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:typesafeEnumClass name="GuidancePatternGNSSMethod"/>
+            </xs:appinfo>
+          </xs:annotation>
           <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="0">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									no GPS fix
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="NO_GPS_FIX"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="1">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									GNSS fix
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="GNSS_FIX"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="2">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									DGNSS fix
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="DGNSS_FIX"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="3">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Precise GNSS
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="PRECISE_GNSS"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="4">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									RTK fixed integer
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="RTK_FIXED_INTEGER"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="5">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									RTK float
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="RTK_FLOAT"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="6">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Est (DR) mode
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="EST_DR_MODE"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="7">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Manual input
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="MANUAL_INPUT"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="8">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Simulate mode
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="SIMULATE_MODE"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="16">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Desktop generated data
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="DESKTOP_GENERATED_DATA"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="17">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Other
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="OTHER"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
           </xs:restriction>
@@ -2557,12 +2602,12 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice minOccurs="0">
+      <xs:choice>
         <xs:element ref="ASP" minOccurs="0">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							AllocationStamp
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="AllocationStamp"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
       </xs:choice>
@@ -2642,12 +2687,12 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice minOccurs="1" maxOccurs="unbounded">
+      <xs:choice>
         <xs:element ref="PNT" minOccurs="1" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							Point
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="Point"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
       </xs:choice>
@@ -2658,68 +2703,73 @@
           </xs:appinfo>
         </xs:annotation>
         <xs:simpleType>
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:typesafeEnumClass name="LineStringType"/>
+            </xs:appinfo>
+          </xs:annotation>
           <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="1">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									PolygonExterior
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="POLYGONEXTERIOR"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="2">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									PolygonInterior
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="POLYGONINTERIOR"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="3">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									TramLine
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="TRAMLINE"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="4">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									SamplingRoute
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="SAMPLINGROUTE"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="5">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									GuidancePattern
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="GUIDANCEPATTERN"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="6">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Drainage
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="DRAINAGE"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="7">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Fence
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="FENCE"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="8">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Flag
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="FLAG"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="9">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Obstacle
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="OBSTACLE"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
           </xs:restriction>
@@ -2894,33 +2944,33 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:choice>
         <xs:element ref="PLN" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							Polygon, non Treatment Zone only
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="Polygon_non_Treatment_Zone_only"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
         <xs:element ref="LSG" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							LineString
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="LineString"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
         <xs:element ref="PNT" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							Point
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="Point"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
         <xs:element ref="GGP" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							GuidanceGroup
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="GuidanceGroup"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
       </xs:choice>
@@ -3066,79 +3116,79 @@
               <xs:restriction base="xs:NMTOKEN">
                 <xs:enumeration value="1">
                   <xs:annotation>
-                    <xs:documentation xml:lang="en">
-											Flag
-										</xs:documentation>
+                    <xs:appinfo>
+                      <jaxb:typesafeEnumMember name="FLAG"/>
+                    </xs:appinfo>
                   </xs:annotation>
                 </xs:enumeration>
                 <xs:enumeration value="2">
                   <xs:annotation>
-                    <xs:documentation xml:lang="en">
-											other
-										</xs:documentation>
+                    <xs:appinfo>
+                      <jaxb:typesafeEnumMember name="OTHER"/>
+                    </xs:appinfo>
                   </xs:annotation>
                 </xs:enumeration>
                 <xs:enumeration value="3">
                   <xs:annotation>
-                    <xs:documentation xml:lang="en">
-											Field Access
-										</xs:documentation>
+                    <xs:appinfo>
+                      <jaxb:typesafeEnumMember name="FIELD_ACCESS"/>
+                    </xs:appinfo>
                   </xs:annotation>
                 </xs:enumeration>
                 <xs:enumeration value="4">
                   <xs:annotation>
-                    <xs:documentation xml:lang="en">
-											Storage
-										</xs:documentation>
+                    <xs:appinfo>
+                      <jaxb:typesafeEnumMember name="STORAGE"/>
+                    </xs:appinfo>
                   </xs:annotation>
                 </xs:enumeration>
                 <xs:enumeration value="5">
                   <xs:annotation>
-                    <xs:documentation xml:lang="en">
-											Obstacle
-										</xs:documentation>
+                    <xs:appinfo>
+                      <jaxb:typesafeEnumMember name="OBSTACLE"/>
+                    </xs:appinfo>
                   </xs:annotation>
                 </xs:enumeration>
                 <xs:enumeration value="6">
                   <xs:annotation>
-                    <xs:documentation xml:lang="en">
-											Guidance Reference A
-										</xs:documentation>
+                    <xs:appinfo>
+                      <jaxb:typesafeEnumMember name="GUIDANCE_REFERENCE_A"/>
+                    </xs:appinfo>
                   </xs:annotation>
                 </xs:enumeration>
                 <xs:enumeration value="7">
                   <xs:annotation>
-                    <xs:documentation xml:lang="en">
-											Guidance Reference B
-										</xs:documentation>
+                    <xs:appinfo>
+                      <jaxb:typesafeEnumMember name="GUIDANCE_REFERENCE_B"/>
+                    </xs:appinfo>
                   </xs:annotation>
                 </xs:enumeration>
                 <xs:enumeration value="8">
                   <xs:annotation>
-                    <xs:documentation xml:lang="en">
-											Guidance Reference Center
-										</xs:documentation>
+                    <xs:appinfo>
+                      <jaxb:typesafeEnumMember name="GUIDANCE_REFERENCE_CENTER"/>
+                    </xs:appinfo>
                   </xs:annotation>
                 </xs:enumeration>
                 <xs:enumeration value="9">
                   <xs:annotation>
-                    <xs:documentation xml:lang="en">
-											Guidance Point
-										</xs:documentation>
+                    <xs:appinfo>
+                      <jaxb:typesafeEnumMember name="GUIDANCE_POINT"/>
+                    </xs:appinfo>
                   </xs:annotation>
                 </xs:enumeration>
                 <xs:enumeration value="10">
                   <xs:annotation>
-                    <xs:documentation xml:lang="en">
-											Partfield Reference Point
-										</xs:documentation>
+                    <xs:appinfo>
+                      <jaxb:typesafeEnumMember name="PARTFIELD_REFERENCE_POINT"/>
+                    </xs:appinfo>
                   </xs:annotation>
                 </xs:enumeration>
                 <xs:enumeration value="11">
                   <xs:annotation>
-                    <xs:documentation xml:lang="en">
-											Homebase
-										</xs:documentation>
+                    <xs:appinfo>
+                      <jaxb:typesafeEnumMember name="HOMEBASE"/>
+                    </xs:appinfo>
                   </xs:annotation>
                 </xs:enumeration>
               </xs:restriction>
@@ -3311,12 +3361,12 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice maxOccurs="unbounded">
+      <xs:choice>
         <xs:element ref="LSG" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							LineString
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="LineString"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
       </xs:choice>
@@ -3327,89 +3377,94 @@
           </xs:appinfo>
         </xs:annotation>
         <xs:simpleType>
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:typesafeEnumClass name="PolygonType"/>
+            </xs:appinfo>
+          </xs:annotation>
           <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="1">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Partfield Boundary
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="PARTFIELD_BOUNDARY"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="2">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									TreatmentZone
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="TREATMENTZONE"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="3">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									WaterSurface
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="WATERSURFACE"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="4">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Building
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="BUILDING"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="5">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Road
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="ROAD"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="6">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Obstacle
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="OBSTACLE"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="7">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Flag
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="FLAG"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="8">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Other
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="OTHER"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="9">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Mainfield
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="MAINFIELD"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="10">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Headland
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="HEADLAND"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="11">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									BufferZone
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="BUFFERZONE"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="12">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Windbreak
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="WINDBREAK"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
           </xs:restriction>
@@ -3524,117 +3579,122 @@
           </xs:appinfo>
         </xs:annotation>
         <xs:simpleType>
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:typesafeEnumClass name="PositionStatus"/>
+            </xs:appinfo>
+          </xs:annotation>
           <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="0">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									no GPS fix
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="NO_GPS_FIX"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="1">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									GNSS fix
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="GNSS_FIX"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="2">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									DGNSS fix
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="DGNSS_FIX"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="3">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Precise GNSS
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="PRECISE_GNSS"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="4">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									RTK fixed integer
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="RTK_FIXED_INTEGER"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="5">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									RTK float
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="RTK_FLOAT"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="6">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Est (DR) mode
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="EST_DR_MODE"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="7">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Manual input
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="MANUAL_INPUT"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="8">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Simulate mode
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="SIMULATE_MODE"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="9">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Reserved
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="RESERVED_9"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="10">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Reserved
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="RESERVED_10"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="11">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Reserved
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="RESERVED_11"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="12">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Reserved
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="RESERVED_12"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="13">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Reserved
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="RESERVED_13"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="14">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Error
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="ERROR"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="15">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									PositionStatus value is not available
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="POSITIONSTATUS_VALUE_IS_NOT_AVAILABLE"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
           </xs:restriction>
@@ -3714,12 +3774,12 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:choice>
         <xs:element ref="PDV" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							ProcessDataVariable
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="ProcessDataVariable"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
       </xs:choice>
@@ -3825,12 +3885,12 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:choice>
         <xs:element ref="PRN" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							ProductRelation
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="ProductRelation"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
       </xs:choice>
@@ -3907,26 +3967,31 @@
           </xs:appinfo>
         </xs:annotation>
         <xs:simpleType>
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:typesafeEnumClass name="ProductType"/>
+            </xs:appinfo>
+          </xs:annotation>
           <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="1">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Single (default)
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="SINGLE_DEFAULT"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="2">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Mixture
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="MIXTURE"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="3">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									TemporaryMixture
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="TEMPORARYMIXTURE"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
           </xs:restriction>
@@ -3993,7 +4058,7 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice minOccurs="0">
+      <xs:choice>
         <xs:element ref="ASP" minOccurs="0">
           <!-- AllocationStamp -->
         </xs:element>
@@ -4044,26 +4109,31 @@
           </xs:appinfo>
         </xs:annotation>
         <xs:simpleType>
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:typesafeEnumClass name="TransferMode"/>
+            </xs:appinfo>
+          </xs:annotation>
           <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="1">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Filling
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="FILLING"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="2">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Emptying
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="EMPTYING"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="3">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Remainder
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="REMAINDER"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
           </xs:restriction>
@@ -4153,19 +4223,24 @@
           </xs:appinfo>
         </xs:annotation>
         <xs:simpleType>
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:typesafeEnumClass name="ProductGroupType"/>
+            </xs:appinfo>
+          </xs:annotation>
           <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="1">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									ProductGroup (default)
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="PRODUCTGROUP_DEFAULT"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="2">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									CropType
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="CROPTYPE"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
           </xs:restriction>
@@ -4216,96 +4291,96 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:choice>
         <xs:element ref="TZN" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							TreatmentZone
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="TreatmentZone"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
         <xs:element ref="TIM" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							Time
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="Time"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
         <xs:element ref="OTP" minOccurs="0">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							OperTechPractice
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="OperTechPractice"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
         <xs:element ref="WAN" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							WorkerAllocation
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="WorkerAllocation"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
         <xs:element ref="DAN" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							DeviceAllocation
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="DeviceAllocation"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
         <xs:element ref="CNN" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							Connection
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="Connection"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
         <xs:element ref="PAN" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							ProductAllocation
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="ProductAllocation"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
         <xs:element ref="DLT" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							DataLogTrigger
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="DataLogTrigger"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
         <xs:element ref="CAN" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							CommentAllocation
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="CommentAllocation"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
         <xs:element ref="TLG" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							TimeLog
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="TimeLog"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
         <xs:element ref="GRD" minOccurs="0">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							Grid
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="Grid"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
         <xs:element ref="CAT" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							ControlAssignment
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="ControlAssignment"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
         <xs:element ref="GAN" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							GuidanceAllocation
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="GuidanceAllocation"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
       </xs:choice>
@@ -4398,47 +4473,52 @@
           </xs:appinfo>
         </xs:annotation>
         <xs:simpleType>
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:typesafeEnumClass name="TaskStatus"/>
+            </xs:appinfo>
+          </xs:annotation>
           <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="1">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Planned
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="PLANNED"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="2">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Running
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="RUNNING"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="3">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Paused
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="PAUSED"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="4">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Completed
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="COMPLETED"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="5">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Template
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="TEMPLATE"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="6">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Canceled
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="CANCELED"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
           </xs:restriction>
@@ -4492,19 +4572,19 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:choice>
         <xs:element ref="PTN" minOccurs="0" maxOccurs="2">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							Position
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="Position"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
         <xs:element ref="DLV" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							DataLogValue
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="DataLogValue"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
       </xs:choice>
@@ -4542,54 +4622,59 @@
           </xs:appinfo>
         </xs:annotation>
         <xs:simpleType>
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:typesafeEnumClass name="Typeidm2282"/>
+            </xs:appinfo>
+          </xs:annotation>
           <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="1">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Planned
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="PLANNED"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="2">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Preliminary
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="PRELIMINARY"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="4">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Effective
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="EFFECTIVE"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="5">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Ineffective
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="INEFFECTIVE"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="6">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Repair
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="REPAIR"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="7">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Clearing
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="CLEARING"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="8">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Powered Down
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="POWERED_DOWN"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
           </xs:restriction>
@@ -4637,12 +4722,17 @@
           </xs:appinfo>
         </xs:annotation>
         <xs:simpleType>
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:typesafeEnumClass name="TimeLogType"/>
+            </xs:appinfo>
+          </xs:annotation>
           <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="1">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Binary timelog file type 1
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="BINARY_TIMELOG_FILE_TYPE_1"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
           </xs:restriction>
@@ -4657,19 +4747,19 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:choice>
         <xs:element ref="PLN" minOccurs="0">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							Polygon, TreatmentZone only
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="Polygon_TreatmentZone_only"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
         <xs:element ref="PDV" minOccurs="0" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							ProcessDataVariable
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="ProcessDataVariable"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
       </xs:choice>
@@ -4975,12 +5065,12 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:complexType>
-      <xs:choice minOccurs="0">
+      <xs:choice>
         <xs:element ref="ASP" minOccurs="0">
           <xs:annotation>
-            <xs:documentation xml:lang="en">
-							AllocationStamp
-						</xs:documentation>
+            <xs:appinfo>
+              <jaxb:property name="AllocationStamp"/>
+            </xs:appinfo>
           </xs:annotation>
         </xs:element>
       </xs:choice>

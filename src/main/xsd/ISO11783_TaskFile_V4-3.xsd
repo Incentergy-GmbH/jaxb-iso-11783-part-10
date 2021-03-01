@@ -29,19 +29,24 @@
           </xs:appinfo>
         </xs:annotation>
         <xs:simpleType>
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:typesafeEnumClass name="Preserve"/>
+            </xs:appinfo>
+          </xs:annotation>
           <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="1">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Task Controller does not need to preserve attached file
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="TASK_CONTROLLER_DOES_NOT_NEED_TO_PRESERVE_ATTACHED_FILE"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="2">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									Preserve on Task Controller and send back to FMIS
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="PRESERVE_ON_TASK_CONTROLLER_AND_SEND_BACK_TO_FMIS"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
           </xs:restriction>
@@ -246,9 +251,9 @@
           <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="4">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									The version of the second edition published as a Final Draft International Standard
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="THE_VERSION_OF_THE_SECOND_EDITION_PUBLISHED_AS_A_FINAL_DRAFT_INTERNATIONAL_STANDARD"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
           </xs:restriction>
@@ -262,10 +267,34 @@
                         </xs:documentation>
           </xs:annotation>
           <xs:restriction base="xs:NMTOKEN">
-            <xs:enumeration value="0"/>
-            <xs:enumeration value="1"/>
-            <xs:enumeration value="2"/>
-            <xs:enumeration value="3"/>
+            <xs:enumeration value="0">
+              <xs:annotation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="ZERO"/>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="1">
+              <xs:annotation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="ONE"/>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="2">
+              <xs:annotation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="TWO"/>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="3">
+              <xs:annotation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="THREE"/>
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:enumeration>
           </xs:restriction>
         </xs:simpleType>
       </xs:attribute>
@@ -302,16 +331,16 @@
           <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="1">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									FMIS
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="FMIS"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="2">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									MICS
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="MICS"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
           </xs:restriction>
@@ -364,40 +393,45 @@
           </xs:appinfo>
         </xs:annotation>
         <xs:simpleType>
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:typesafeEnumClass name="VersionNumber"/>
+            </xs:appinfo>
+          </xs:annotation>
           <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="0">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									The version of the DIS.1 (first draft international standard)
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="THE_VERSION_OF_THE_DIS1_FIRST_DRAFT_INTERNATIONAL_STANDARD"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="1">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									The version of the FDIS.1 (final draft international standard, first edition)
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="THE_VERSION_OF_THE_FDIS1_FINAL_DRAFT_INTERNATIONAL_STANDARD_FIRST_EDITION"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="2">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									The version of the FDIS.2 and the first edition published as an international standard
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="THE_VERSION_OF_THE_FDIS2_AND_THE_FIRST_EDITION_PUBLISHED_AS_AN_INTERNATIONAL_STANDARD"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="3">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									The version of the second edition published as a draft international standard (E2.DIS)
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="THE_VERSION_OF_THE_SECOND_EDITION_PUBLISHED_AS_A_DRAFT_INTERNATIONAL_STANDARD_E2DIS"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="4">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									The version of the second edition published as a final draft international standard (E2.FDIS)
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="THE_VERSION_OF_THE_SECOND_EDITION_PUBLISHED_AS_A_FINAL_DRAFT_INTERNATIONAL_STANDARD_E2FDIS"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
           </xs:restriction>
@@ -484,12 +518,17 @@
           </xs:appinfo>
         </xs:annotation>
         <xs:simpleType>
+          <xs:annotation>
+            <xs:appinfo>
+              <jaxb:typesafeEnumClass name="Filetype"/>
+            </xs:appinfo>
+          </xs:annotation>
           <xs:restriction base="xs:NMTOKEN">
             <xs:enumeration value="1">
               <xs:annotation>
-                <xs:documentation xml:lang="en">
-									XML
-								</xs:documentation>
+                <xs:appinfo>
+                  <jaxb:typesafeEnumMember name="XML"/>
+                </xs:appinfo>
               </xs:annotation>
             </xs:enumeration>
           </xs:restriction>
