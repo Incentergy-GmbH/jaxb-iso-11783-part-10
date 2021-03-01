@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!-- Schema revision date 2018-06-04, Schema version 4.3, TC version 4, schema revision 3 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.1" elementFormDefault="qualified">
-  <xs:include schemaLocation="common.xsd"/>
+  <xs:include schemaLocation="ISO11783_Common_V4-3.xsd"/>
   <xs:element name="AFE">
     <xs:annotation>
       <xs:appinfo>
