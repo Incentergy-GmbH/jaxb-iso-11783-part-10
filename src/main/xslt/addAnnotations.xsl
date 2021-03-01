@@ -87,8 +87,8 @@
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:variable>
-						<xsl:attribute name="name"><xsl:value-of
-							select="$typeName" /><xsl:if test="$typeName = 'Type'"><xsl:value-of select="generate-id(.)"/></xsl:if></xsl:attribute>
+						<xsl:attribute name="name"><xsl:if test="$typeName = 'Type' and generate-id(.) = 'idm2282'">Time</xsl:if><xsl:value-of
+							select="$typeName" /></xsl:attribute>
 					</jaxb:typesafeEnumClass>
 				</xs:appinfo>
 			</xs:annotation>
