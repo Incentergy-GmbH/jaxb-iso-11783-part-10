@@ -1,0 +1,15 @@
+<jaxb:bindings
+        version="2.1"
+        xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+    >
+    <jaxb:bindings schemaLocation="../xsd/ISO11783_TimeLog_V4-3.xsd" node="/xs:schema">
+        <jaxb:globalBindings localScoping="toplevel">
+            <jaxb:serializable />
+        </jaxb:globalBindings>
+        <jaxb:schemaBindings>
+                <jaxb:package name="de.incentergy.iso11783.part10.v4.log" />
+        </jaxb:schemaBindings>
+    </jaxb:bindings>
+</jaxb:bindings>
