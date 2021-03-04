@@ -4,16 +4,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
     <groupId>de.incentergy.iso11783.part10</groupId>
-    <artifactId>jaxb-iso-11783-part10-main</artifactId>
+    <artifactId>jaxb-iso-11783-part10-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <profiles>
-        <profile>
-            <modules>
-                <module>iso-linklist</module>
-                <module>iso-taskfile</module>
-                <module>iso-logfile</module>
-            </modules>
-        </profile>
-    </profiles>
+    <modules>
+        <module>iso-linklist</module>
+        <module>iso-taskfile</module>
+        <module>iso-logfile</module>
+    </modules>
 </project>

@@ -88,7 +88,7 @@
 							</xsl:choose>
 						</xsl:variable>
 						<xsl:variable name="typeClass">
-							<xsl:value-of select="../../../@name"></xsl:value-of>
+							<xsl:value-of select="normalize-space(../../../xs:annotation/xs:documentation/text())"></xsl:value-of>
 						</xsl:variable>
 						<xsl:attribute name="name"><xsl:if test="$typeName = 'Type'"><xsl:value-of select="$typeClass"/></xsl:if><xsl:value-of
 							select="$typeName" /></xsl:attribute>
