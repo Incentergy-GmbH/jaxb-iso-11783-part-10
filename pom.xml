@@ -7,13 +7,56 @@
 	<groupId>de.incentergy.iso11783.part10</groupId>
 	<artifactId>jaxb-iso-11783-part10</artifactId>
 	<version>1.0-SNAPSHOT</version>
-
+	<description>This project contains generated JAXB classes based on the XSDs schemas for the ISO 11783 standard: https://www.isobus.net/isobus/file/supportingDocuments</description>
+	<url>https://github.com/ManuelB/jaxb-iso-11783-part-10/</url>
+	
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 	<properties>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
+	<organization>
+		<name>Incentergy GmbH</name>
+		<url>http://www.incentergy.de</url>
+	</organization>
+	<scm>
+		<url>https://github.com/ManuelB/jaxb-iso-11783-part10.git</url>
+		<connection>scm:git:https://github.com/ManuelB/jaxb-iso-11783-part10.git</connection>
+		<tag>HEAD</tag>
+	</scm>
+	<developers>
+		<developer>
+			<id>Manuel_B</id>
+			<name>Manuel Blechschmidt</name>
+			<email>manuel.blechschmidt@incentergy.de</email>
+		</developer>
+		<developer>
+			<id>Frank-Wiebler</id>
+			<name>Frank Wiebler</name>
+		</developer>
+	        <developer>
+                        <id>aparshin</id>
+                        <name>Alexander Parshin</name>
+		</developer>
+        </developers>
+
+	<!--
+	     mvn release:prepare
+	     mvn release:perform -Darguments="-Dgpg.passphrase='' -DaltDeploymentRepository=sonatype-nexus-staging::default::https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+	     #  https://oss.sonatype.org/#stagingRepositories
+        -->
+        <issueManagement>
+	  <system>Github</system>
+	  <url>https://github.com/ManuelB/jaxb-iso-11783-part10/issues</url>
+        </issueManagement>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
 		<dependency>
