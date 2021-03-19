@@ -28,9 +28,9 @@
 		<url>http://www.incentergy.de</url>
 	</organization>
 	<scm>
-		<url>https://github.com/ManuelB/jaxb-iso-11783-part10.git</url>
-		<connection>scm:git:git@github.com/ManuelB/jaxb-iso-11783-part10.git</connection>
-		<developerConnection>scm:git:git@github.com/ManuelB/jaxb-iso-11783-part10.git</developerConnection>
+		<url>https://github.com/ManuelB/jaxb-iso-11783-part-10</url>
+		<connection>scm:git:git@github.com/ManuelB/jaxb-iso-11783-part-10.git</connection>
+		<developerConnection>scm:git:git@github.com/ManuelB/jaxb-iso-11783-part-10.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 	<developers>
