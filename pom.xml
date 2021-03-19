@@ -29,7 +29,8 @@
 	</organization>
 	<scm>
 		<url>https://github.com/ManuelB/jaxb-iso-11783-part10.git</url>
-		<connection>scm:git:https://github.com/ManuelB/jaxb-iso-11783-part10.git</connection>
+		<connection>scm:git:git@github.com/ManuelB/jaxb-iso-11783-part10.git</connection>
+		<developerConnection>scm:git:git@github.com/ManuelB/jaxb-iso-11783-part10.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 	<developers>
