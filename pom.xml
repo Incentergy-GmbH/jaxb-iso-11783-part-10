@@ -4,10 +4,10 @@
 
 	<groupId>de.incentergy.iso11783.part10</groupId>
 	<artifactId>jaxb-iso-11783-part10</artifactId>
-	<version>1.1-SNAPSHOT</version>
+	<version>1.0-SNAPSHOT</version>
 	<description>This project contains generated JAXB classes based on the XSDs schemas for the ISO 11783 standard: https://www.isobus.net/isobus/file/supportingDocuments</description>
 	<url>https://github.com/ManuelB/jaxb-iso-11783-part-10/</url>
-	
+
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
@@ -40,21 +40,21 @@
 			<id>Frank-Wiebler</id>
 			<name>Frank Wiebler</name>
 		</developer>
-	        <developer>
-                        <id>aparshin</id>
-                        <name>Alexander Parshin</name>
+		<developer>
+			<id>aparshin</id>
+			<name>Alexander Parshin</name>
 		</developer>
-        </developers>
+	</developers>
 
 	<!--
 	     mvn release:prepare
 	     mvn release:perform -Darguments="-Dgpg.passphrase='' -DaltDeploymentRepository=sonatype-nexus-staging::default::https://oss.sonatype.org/service/local/staging/deploy/maven2/"
 	     #  https://oss.sonatype.org/#stagingRepositories
-        -->
-        <issueManagement>
-	  <system>Github</system>
-	  <url>https://github.com/ManuelB/jaxb-iso-11783-part10/issues</url>
-        </issueManagement>
+	-->
+	<issueManagement>
+		<system>Github</system>
+		<url>https://github.com/ManuelB/jaxb-iso-11783-part10/issues</url>
+	</issueManagement>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
 		<dependency>
@@ -99,4 +99,33 @@
 			</plugin>
 		</plugins>
 	</build>
+	<profiles>
+		<profile>
+			<id>release-sign-artifacts</id>
+			<activation>
+				<property>
+					<name>performRelease</name>
+					<value>true</value>
+				</property>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>1.1</version>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>
