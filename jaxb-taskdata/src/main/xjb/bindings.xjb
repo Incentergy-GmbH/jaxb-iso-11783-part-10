@@ -9,7 +9,7 @@
                 <jaxb:serializable />
             </jaxb:globalBindings>
             <jaxb:schemaBindings>
-                    <jaxb:package name="de.incentergy.iso11783.part10.v4" />
+                    <jaxb:package name="de.incentergy.iso11783.part10.v4.taskdata" />
             </jaxb:schemaBindings>
         </jaxb:bindings>
 </jaxb:bindings>
