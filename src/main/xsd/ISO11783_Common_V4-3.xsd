@@ -3560,7 +3560,14 @@
       <xs:attribute name="C" use="optional">
         <xs:annotation>
           <xs:appinfo>
-            <jaxb:property name="PositionUp"/>
+            <jaxb:property name="PositionUp">
+                <jaxb:baseType>
+                    <jaxb:javaType name="Integer" 
+                        parseMethod="de.incentergy.iso11783.part10.v4.FlexibleNumberAdapter.parseStringToInteger" 
+                        printMethod="de.incentergy.iso11783.part10.v4.FlexibleNumberAdapter.printIntegerToString"
+                    />
+                </jaxb:baseType>
+            </jaxb:property>
           </xs:appinfo>
         </xs:annotation>
         <xs:simpleType>
@@ -3740,7 +3747,14 @@
       <xs:attribute name="H" use="optional">
         <xs:annotation>
           <xs:appinfo>
-            <jaxb:property name="GpsUtcTime"/>
+            <jaxb:property name="GpsUtcTime">
+                <jaxb:baseType>
+                    <jaxb:javaType name="Long" 
+                        parseMethod="de.incentergy.iso11783.part10.v4.FlexibleNumberAdapter.parseStringToLong" 
+                        printMethod="de.incentergy.iso11783.part10.v4.FlexibleNumberAdapter.printLongToString"
+                    />
+                </jaxb:baseType>
+            </jaxb:property>
           </xs:appinfo>
         </xs:annotation>
         <xs:simpleType>
