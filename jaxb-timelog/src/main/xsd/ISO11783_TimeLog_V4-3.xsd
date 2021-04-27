@@ -40,7 +40,7 @@
           </xs:appinfo>
         </xs:annotation>
         <xs:simpleType>
-          <xs:restriction base="xs:IDREF">
+          <xs:restriction base="xs:string">
             <xs:minLength value="4"/>
             <xs:maxLength value="14"/>
             <xs:pattern value="(DET|DET-)([0-9])+"/>
