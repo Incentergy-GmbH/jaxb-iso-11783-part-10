@@ -29,7 +29,7 @@
 	<scm>
 		<url>https://github.com/ManuelB/jaxb-iso-11783-part-10</url>
 		<connection>scm:git:ssh://git@github.com:Incentergy-GmbH/jaxb-iso-11783-part-10.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com:Incentergy-GmbH/jaxb-iso-11783-part-10.git</developerConnection>
+		<developerConnection>scm:git:ssh://git@github.com/Incentergy-GmbH/jaxb-iso-11783-part-10.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 	<developers>
